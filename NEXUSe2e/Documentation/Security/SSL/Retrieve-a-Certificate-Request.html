@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+
+<html xml:lang="en" lang="en" class="no-js">
+
+<head>
+   <!--[if IE]>
+   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=IE7" />
+   <![endif]-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<meta name="keywords" content="Retrieve a Certificate Request" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<meta name="robots" content="all" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+<meta name="generator" content="Powered by Magnolia - Simple Open-Source CMS" />
+
+<title>Home - Retrieve a Certificate Request</title>
+
+
+    <link rel="stylesheet" type="text/css" href="../../../../resources/templating-kit/themes/NEXUSe2e-website/css/nexuse2e.css" media="" />
+
+<!--[if ! lte IE 6]><!-->
+        <script>
+            //global information for the javascripts
+            window.magnoliaFrontendData = {
+                themePath: "/resources/templating-kit/",
+                contextPath: "",
+                isEdit: false,
+                texts: {
+                    lightbox: {
+                        close: "close lightbox",
+                        next: "next picture"
+                    },
+                    close: "close"
+                },
+                cfg: {
+
+                }
+            };
+        </script>
+    <script src="../../../../resources/templating-kit/themes/NEXUSe2e-website/js/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script src="../../../../resources/templating-kit/themes/NEXUSe2e-website/js/nexuse2e.js" type="text/javascript"></script>
+
+
+<!--<![endif]-->
+</head>
+
+
+
+<body id="article" >
+
+    <div id="wrapper">
+
+
+<div id="branding" role="banner">
+    <div id="branding-box">
+        <p class="skip">
+           <a href="Retrieve-a-Certificate-Request.html#main">Main Content</a>
+        </p>
+
+<div id="logo">
+    <a href="../../../../NEXUSe2e.html" title="Homepage">
+        
+        <strong>Home</strong>
+        
+        <span></span>
+    </a>
+</div><!-- end logo -->
+
+<div id="search-box">
+    <h6>Search</h6>
+    <form action="../../../Services/SearchResults.html" >
+    <div>
+        <label for="searchbar">Search For</label>
+        <input required="required" id="searchbar" name="queryStr" type="text" value="" />
+        <input class="button" type="submit" value="Search" />
+    </div>
+    </form>
+</div><!-- end search-box -->
+
+<div id="nav-meta">
+    <ul>
+            </ul>
+</div><!-- end nav-meta -->
+    </div><!-- end branding-box -->
+</div><!-- end branding -->
+
+
+    <div id="nav-global"  role="navigation">
+        <div id="nav-global-box">
+            <h6>Navigation</h6>
+      <ul>
+
+
+
+              <li id="nav-sec-news">
+                      <a href="../../../News.html"><span>News</span></a>
+
+              </li>
+
+
+
+              <li id="nav-sec-product">
+                      <a href="../../../Product.html"><span>Product</span></a>
+
+              </li>
+
+
+
+              <li id="nav-sec-service">
+                      <a href="../../../Service.html"><span>Service</span></a>
+
+              </li>
+
+
+
+              <li id="nav-sec-documentation" class="on">
+                          <a href="../../../Documentation.html">                         <span><em>You are here: </em>Documentation</span>
+</a>
+
+              </li>
+
+
+
+              <li id="nav-sec-downloads">
+                      <a href="../../../Downloads.html"><span>Downloads</span></a>
+
+              </li>
+      </ul>
+        </div><!-- end nav-global-box -->
+    </div><!-- end nav-global -->
+
+
+
+
+        <div id="wrapper-2">
+
+
+    <div id="nav">
+        <div id="nav-box" role="navigation">
+            <h6>Sub-navigation</h6>
+        <ul>
+
+            <li>
+                    <a href="../../Installation.html">Installation</a>
+            </li>
+
+            <li>
+                    <a href="../../Upgrade.html">Upgrade</a>
+            </li>
+
+            <li>
+                    <a href="../../Configuration.html">Configuration</a>
+            </li>
+
+            <li class="open">
+                    <a href="../../Security.html">Security</a>
+        <ul>
+
+            <li>
+                    <a href="../Client-Authentication.html">Client Authentication</a>
+            </li>
+
+            <li>
+                    <a href="../Secure-Web-Service.html">Configure a secure web service endpoint</a>
+            </li>
+
+            <li class="on">
+                        <a href="../SSL.html">                        <span><em>You are here:</em>SSL</span>
+</a>
+            </li>
+        </ul>
+            </li>
+
+            <li>
+                    <a href="../../Messaging.html">Messaging</a>
+            </li>
+        </ul>
+        </div><!-- end nav-box -->
+    </div><!-- end nav -->
+
+
+            <div id="wrapper-3">
+
+
+<div id="main" role="main">
+
+    
+<div id="breadcrumb">
+    <h5>You are here:</h5>
+    <ol>
+              <li><a href="../../../../NEXUSe2e.html">Home</a></li>
+              <li><a href="../../../Documentation.html">Documentation</a></li>
+              <li><a href="../../Security.html">Security</a></li>
+              <li><a href="../SSL.html">SSL</a></li>
+              <li><strong>Retrieve a Certificate Request</strong></li>
+    </ol>
+</div><!-- end breadcrumb -->
+    <div class="text" role="article">
+
+    <h1>
+        
+        Retrieve a Certificate Request
+    </h1>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="text-section">
+    <h2 >Scenario:</h2>
+
+
+        <ul>
+	<li>You didn&#39;t save your created certificate request to the database</li>
+	<li>You discarded an older request and created a new one</li>
+</ul>
+
+</div>
+
+
+
+
+
+
+<div class="text-section">
+    <h2 >Locate the Backup Files</h2>
+
+
+        <p>NEXUSe2e creates a backup of every certificate request created in the Admin GUI.</p>
+
+<p>Navigate to the following Tomcat subfolder:</p>
+
+</div>
+
+    <blockquote>
+        <p><em>YourTomcat</em>\webapps\<em>YourNEXUSe2e</em>\WEB-INF\backup\</p>
+
+    </blockquote>
+
+
+
+
+
+
+<div class="text-section">
+    
+
+
+        <p>You&#39;ll find subfolders with the following naming pattern:</p>
+
+<p>requestCreate_YYMMDDHHMMSS</p>
+
+</div>
+
+    <blockquote>
+        <p>\webapps\NEXUSe2e_5.0.5\WEB-INF\backup\requestCreate_140523112934\</p>
+
+    </blockquote>
+
+
+
+
+
+
+<div class="text-section">
+    
+
+
+        <p>The privKey.pem and request.pem are located in this folder, which you can reimport to your NEXUSe2e or handle manually to create a valid certificate.</p>
+
+</div>
+
+
+
+
+
+
+<div class="text-section">
+    <h2 >Import your NEXUSe2e Certificate Request Backup</h2>
+
+
+</div>
+
+
+
+
+
+
+<div class="text-section">
+    
+
+
+        <p><strong>Create a usable Backup File</strong></p>
+
+<p>To import the automatically created backup files you&#39;ll need to switch to the designated backup folder described above. Open those two files with a text editor and copy all content of your privKey.pem. Switch to request.pem and jump behind the last character, press enter and paste the content of your privKey.pem. Save this file via &quot;Save as...&quot; function under a new name - private_data.pem for example.</p>
+
+<p>Make sure you don&#39;t add any blanks to the end of any line, else NEXUSe2e will refuse this file.</p>
+
+<p>Your new &quot;private_data.pem&quot; should look like this:</p>
+
+</div>
+
+
+
+
+
+
+<div class="text-section">
+    
+
+
+            <dl class="media photo">
+                <dt><img src="../../../../dam/NEXUSe2e/Documentation/Security/SSL/Retrieve-a-Certificate/CERT_EXAMPLE.2014-09-19-17-31-30.png" alt="" /></dt>
+                <dd class="zoom"><a href="../../../../dam/NEXUSe2e/Documentation/Security/SSL/Retrieve-a-Certificate/CERT_EXAMPLE.2014-09-19-17-31-30.png" title="Zoom on this image" rel="showbox">Zoom</a></dd>
+                <dd class="caption"></dd>
+                <dd class="copyright"></dd>
+                <dd class="longdesc"></dd>
+            </dl>
+
+</div>
+
+
+
+
+
+
+<div class="text-section">
+    
+
+
+        <p><strong>Import a Backup File</strong></p>
+
+<p>Login to your NEXUSe2e ADMIN GUI and switch to:</p>
+
+</div>
+
+    <blockquote>
+        <p><em>NEXUSe2e &gt; Server Configuration &gt; Certificates &gt; Certificate Request</em></p>
+
+    </blockquote>
+
+
+
+
+
+
+<div class="text-section">
+    
+
+
+        <p>Finally follow these steps to import your Certificate Request:</p>
+
+<p>1. Export your current Certificate Request as backup</p>
+
+<p><span style="line-height:1.6em">2. Remove the current Certificate Request</span></p>
+
+<p>3. Import your created backup file</p>
+
+</div>
+
+
+
+
+
+
+<div class="text-section">
+    
+
+
+            <dl class="media photo large">
+                <dt><img src="../../../../dam/NEXUSe2e/Documentation/Security/SSL/Retrieve-a-Certificate/Retrieve_Cert_Menu_No_spotlight.2014-09-19-17-31-31.png" alt="" /></dt>
+                <dd class="zoom"><a href="../../../../dam/NEXUSe2e/Documentation/Security/SSL/Retrieve-a-Certificate/Retrieve_Cert_Menu_No_spotlight.2014-09-19-17-31-31.png" title="Zoom on this image" rel="showbox">Zoom</a></dd>
+                <dd class="caption"></dd>
+                <dd class="copyright"></dd>
+                <dd class="longdesc"></dd>
+            </dl>
+
+</div>
+    </div><!-- end text -->
+</div><!-- end main -->
+
+<div id="extras" role="complementary">
+    
+
+</div>
+
+            </div><!-- end wrapper-3 -->
+
+
+<div id="promos">
+    </div><!-- end promos -->
+
+
+        </div><!-- end wrapper-2 -->
+
+
+
+<div id="site-info">
+    <div id="site-info-box">
+        
+<div>
+    
+<ul>
+    
+    <li >
+            <a href="../../../Services/Contact.html">Contact</a>
+    </li>
+
+    <li >
+            <a href="../../../Services/Legal-Notices-Impressum.html">Legal Notices / Impressum</a>
+    </li>
+</ul>
+</div>
+
+            <p id="copyright"> </p>
+
+        <!-- <p id="copyright-magnolia"><span>Powered by</span> <a href="http://www.magnolia-cms.com"><strong>Magnolia</strong> - Intuitive Web Content Management System</a></p> -->
+    </div><!-- end site-info-box -->
+</div><!-- end site-info -->
+
+    </div><!-- end wrapper -->
+
+</body>
+</html>

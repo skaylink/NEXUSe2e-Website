@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+
+<html xml:lang="en" lang="en" class="no-js">
+
+<head>
+   <!--[if IE]>
+   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=IE7" />
+   <![endif]-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<meta name="keywords" content="HTTP Plain Messaging" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<meta name="robots" content="all" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+<meta name="generator" content="Powered by Magnolia - Open-Source Enterprise Content Management" />
+
+<title>Home - HTTP Plain Messaging</title>
+
+
+    <link rel="stylesheet" type="text/css" href="../../../resources/templating-kit/themes/NEXUSe2e-website/css/nexuse2e.css" media="" />
+
+<!--[if ! lte IE 6]><!-->
+        <script>
+            //global information for the javascripts
+            window.magnoliaFrontendData = {
+                themePath: "/resources/templating-kit/",
+                contextPath: "",
+                isEdit: false,
+                texts: {
+                    lightbox: {
+                        close: "close lightbox",
+                        next: "next picture"
+                    },
+                    close: "close"
+                },
+                cfg: {
+
+                }
+            };
+        </script>
+    <script src="../../../resources/templating-kit/themes/NEXUSe2e-website/js/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script src="../../../resources/templating-kit/themes/NEXUSe2e-website/js/nexuse2e.js" type="text/javascript"></script>
+
+
+<!--<![endif]-->
+</head>
+
+
+
+<body id="article" >
+
+    <div id="wrapper">
+
+
+<div id="branding" role="banner">
+    <div id="branding-box">
+        <p class="skip">
+           <a href="Sending-http-Plain-Message-to-NEXUSe2e.html#main">Main Content</a>
+        </p>
+
+<div id="logo">
+    <a href="../../../NEXUSe2e.html" title="Homepage">
+        
+        <strong>Home</strong>
+        
+        <span></span>
+    </a>
+</div><!-- end logo -->
+
+<div id="search-box">
+    <h6>Search</h6>
+    <form action="../../Services/SearchResults.html" >
+    <div>
+        <label for="searchbar">Search For</label>
+        <input required="required" id="searchbar" name="queryStr" type="text" value="" />
+        <input class="button" type="submit" value="Search" />
+    </div>
+    </form>
+</div><!-- end search-box -->
+
+<div id="nav-meta">
+    <ul>
+            </ul>
+</div><!-- end nav-meta -->
+    </div><!-- end branding-box -->
+</div><!-- end branding -->
+
+
+    <div id="nav-global"  role="navigation">
+        <div id="nav-global-box">
+            <h6>Navigation</h6>
+      <ul>
+
+
+
+              <li id="nav-sec-news">
+                      <a href="../../News.html"><span>News</span></a>
+
+              </li>
+
+
+
+              <li id="nav-sec-product">
+                      <a href="../../Product.html"><span>Product</span></a>
+
+              </li>
+
+
+
+              <li id="nav-sec-service">
+                      <a href="../../Service.html"><span>Service</span></a>
+
+              </li>
+
+
+
+              <li id="nav-sec-documentation" class="on">
+                          <a href="../../Documentation.html">                         <span><em>You are here: </em>Documentation</span>
+</a>
+
+              </li>
+
+
+
+              <li id="nav-sec-downloads">
+                      <a href="../../Downloads.html"><span>Downloads</span></a>
+
+              </li>
+      </ul>
+        </div><!-- end nav-global-box -->
+    </div><!-- end nav-global -->
+
+
+
+
+        <div id="wrapper-2">
+
+
+    <div id="nav">
+        <div id="nav-box" role="navigation">
+            <h6>Sub-navigation</h6>
+        <ul>
+
+            <li>
+                    <a href="../Installation.html">Installation</a>
+            </li>
+
+            <li>
+                    <a href="../Upgrade.html">Upgrade</a>
+            </li>
+
+            <li>
+                    <a href="../Configuration.html">Configuration</a>
+            </li>
+
+            <li>
+                    <a href="../Security.html">Security</a>
+            </li>
+
+            <li class="open">
+                    <a href="../Messaging.html">Messaging</a>
+        <ul>
+
+            <li>
+                    <a href="First-Steps-In-Messaging.html">First Steps in Messaging</a>
+            </li>
+
+            <li>
+                    <a href="Testing-Connectivity.html">Testing Connectivity</a>
+            </li>
+
+            <li>
+                    <a href="Mime-Type.html">Unconfigured Content Type</a>
+            </li>
+
+            <li class="on">
+                        <strong>                        <span><em>You are here:</em>HTTP Plain Messaging</span>
+</strong>
+            </li>
+
+            <li>
+                    <a href="Backend-Web-Service-Integration.html">Backend Web Service Integration</a>
+            </li>
+
+            <li>
+                    <a href="Conversation-Purging.html">Conversation/Message Purging</a>
+            </li>
+
+            <li>
+                    <a href="NEXUSe2e---COMET.html">NEXUSe2e - comet</a>
+            </li>
+        </ul>
+            </li>
+        </ul>
+        </div><!-- end nav-box -->
+    </div><!-- end nav -->
+
+
+            <div id="wrapper-3">
+
+
+<div id="main" role="main">
+
+    
+<div id="breadcrumb">
+    <h5>You are here:</h5>
+    <ol>
+              <li><a href="../../../NEXUSe2e.html">Home</a></li>
+              <li><a href="../../Documentation.html">Documentation</a></li>
+              <li><a href="../Messaging.html">Messaging</a></li>
+              <li><strong>HTTP Plain Messaging</strong></li>
+    </ol>
+</div><!-- end breadcrumb -->
+    <div class="text" role="article">
+
+    <h1>
+        
+        HTTP Plain Messaging
+    </h1>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="text-section">
+    <h2 >Create In- and Outboundpipeline</h2>
+
+
+        <p>Login to your NEXUSe2e ADMIN GUI and switch to:</p>
+
+</div>
+
+    <blockquote>
+        <p><em>NEXUSe2e &gt; Server Configuration &gt; Frontend Pipelines</em></p>
+
+    </blockquote>
+
+
+
+
+
+
+<div class="text-section">
+    
+
+
+        <p><strong>Create Inboundpipeline</strong></p>
+
+<p>Click &quot;Add Pipeline&quot; and</p>
+
+<ol>
+	<li>Give your Pipeline a distinct Name<br />
+	Define the direction as Inbound<br />
+	Select httpplain-1.0-http as TRP</li>
+	<li>Save your Pipeline for later editing</li>
+</ol>
+
+<p>&nbsp;</p>
+
+</div>
+
+
+
+
+
+
+<div class="text-section">
+    
+
+
+            <dl class="media photo">
+                <dt><img src="../../../dam/NEXUSe2e/Documentation/Messaging/HTTP-Plain/01_CreateInboundPipeline.2014-09-19-17-31-37.jpg" alt="" /></dt>
+                <dd class="zoom"><a href="../../../dam/NEXUSe2e/Documentation/Messaging/HTTP-Plain/01_CreateInboundPipeline.2014-09-19-17-31-37.jpg" title="Zoom on this image" rel="showbox">Zoom</a></dd>
+                <dd class="caption"></dd>
+                <dd class="copyright"></dd>
+                <dd class="longdesc"></dd>
+            </dl>
+
+</div>
+
+
+
+
+
+
+<div class="text-section">
+    
+
+
+        <p><strong>Configure Inboundpipeline</strong></p>
+
+<p>Jump back into your created pipeline and</p>
+
+<ol>
+	<li>Add the TransportReceiver, httpPlainMessageUnpacker and httpPlainHeaderDeserializer in this order</li>
+	<li>Click &quot;Configure Pipelet&quot; for the TransportReceiver and select HttpPlainReceiverService and save this change</li>
+	<li>Save your Pipeline</li>
+</ol>
+
+<p>Click &quot;Apply&quot; to save your settings.</p>
+
+</div>
+
+
+
+
+
+
+<div class="text-section">
+    
+
+
+            <dl class="media photo">
+                <dt><img src="../../../dam/NEXUSe2e/Documentation/Messaging/HTTP-Plain/02_ConfigureInboundPipeline.2014-09-19-17-31-36.jpg" alt="" /></dt>
+                <dd class="zoom"><a href="../../../dam/NEXUSe2e/Documentation/Messaging/HTTP-Plain/02_ConfigureInboundPipeline.2014-09-19-17-31-36.jpg" title="Zoom on this image" rel="showbox">Zoom</a></dd>
+                <dd class="caption"></dd>
+                <dd class="copyright"></dd>
+                <dd class="longdesc"></dd>
+            </dl>
+
+</div>
+
+
+
+
+
+
+<div class="text-section">
+    
+
+
+        <p><strong>Create Outboundpipeline</strong></p>
+
+<p>Click &quot;Add Pipeline&quot; and</p>
+
+<ol>
+	<li>Give your Pipeline a distinct Name<br />
+	Define the direction as Outbound<br />
+	Select httpplain-1.0-http as TRP</li>
+	<li>Save your Pipeline for later editing</li>
+</ol>
+
+<p>&nbsp;</p>
+
+</div>
+
+
+
+
+
+
+<div class="text-section">
+    
+
+
+            <dl class="media photo">
+                <dt><img src="../../../dam/NEXUSe2e/Documentation/Messaging/HTTP-Plain/03_CreateOutboundPipeline.2014-09-19-17-31-36.jpg" alt="" /></dt>
+                <dd class="zoom"><a href="../../../dam/NEXUSe2e/Documentation/Messaging/HTTP-Plain/03_CreateOutboundPipeline.2014-09-19-17-31-36.jpg" title="Zoom on this image" rel="showbox">Zoom</a></dd>
+                <dd class="caption"></dd>
+                <dd class="copyright"></dd>
+                <dd class="longdesc"></dd>
+            </dl>
+
+</div>
+
+
+
+
+
+
+<div class="text-section">
+    
+
+
+        <p><strong>Configure Outboundpipeline</strong></p>
+
+<p>Jump back into your created pipeline and</p>
+
+<ol>
+	<li>Add the httpPLainMessagePacker and TransportSender in this order</li>
+	<li>Click &quot;Configure Pipelet&quot; for the TransportSender and select HttpPlainSenderService and save this change</li>
+	<li>Save your Pipeline</li>
+</ol>
+
+<p>Click &quot;Apply&quot; to save your settings.</p>
+
+</div>
+
+
+
+
+
+
+<div class="text-section">
+    
+
+
+            <dl class="media photo">
+                <dt><img src="../../../dam/NEXUSe2e/Documentation/Messaging/HTTP-Plain/04_ConfigureOutboundPipeline.2014-09-19-17-31-36.jpg" alt="" /></dt>
+                <dd class="zoom"><a href="../../../dam/NEXUSe2e/Documentation/Messaging/HTTP-Plain/04_ConfigureOutboundPipeline.2014-09-19-17-31-36.jpg" title="Zoom on this image" rel="showbox">Zoom</a></dd>
+                <dd class="caption"></dd>
+                <dd class="copyright"></dd>
+                <dd class="longdesc"></dd>
+            </dl>
+
+</div>
+
+
+
+
+
+
+<div class="text-section">
+    <h2 >Configure Partner &amp; Choreography</h2>
+
+
+        <p>To ensure NEXUSe2e will accept incoming HTTP plain messages you need a configured partner. You can use an excisting partner or create a new. This Partner needs to be in the choreography of the action you want to use.</p>
+
+<p><strong>Configure Partner</strong></p>
+
+<p>If you want to use an excisting partner you can skip this step.</p>
+
+<p>Switch to following menu point in the NEXUSe2e Admin GUI:</p>
+
+</div>
+
+    <blockquote>
+        <p><em>NEXUSe2e &gt; Collaboration Partners</em></p>
+
+    </blockquote>
+
+
+
+
+
+
+<div class="text-section">
+    
+
+
+        <p>And click on &quot;Add Collaboration Partner&quot;.</p>
+
+<p>In the next screen fill least a Partner ID and confirm with &quot;Save&quot;.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Configure Partner Connection for Receive Only</strong></p>
+
+<p>If you only want to receive HTTP plain messages, without answering with an ackkowledgement or sending a messages by your own, you don&#39;t need a correctly configured connection.</p>
+
+<p>Switch to following menu point in your NEXUSe2e Admin GUI:</p>
+
+</div>
+
+    <blockquote>
+        <p><em>NEXUSe2e &gt; Collaboration Partners &gt; YourPartner &gt; Connections</em></p>
+
+    </blockquote>
+
+
+
+
+
+
+<div class="text-section">
+    
+
+
+        <p>Click on new &quot;Add Connection&quot; and follow these instructions:</p>
+
+<ol>
+	<li>Add a connection name and add localhost to connection URL.</li>
+</ol>
+
+</div>
+
+
+
+
+
+
+<div class="text-section">
+    
+
+
+            <dl class="media photo">
+                <dt><img src="../../../dam/NEXUSe2e/Documentation/Messaging/HTTP-Plain/05_ConfigurePartnerConnection_receiveOnly.2014-09-19-17-31-35.jpg" alt="" /></dt>
+                <dd class="zoom"><a href="../../../dam/NEXUSe2e/Documentation/Messaging/HTTP-Plain/05_ConfigurePartnerConnection_receiveOnly.2014-09-19-17-31-35.jpg" title="Zoom on this image" rel="showbox">Zoom</a></dd>
+                <dd class="caption"></dd>
+                <dd class="copyright"></dd>
+                <dd class="longdesc"></dd>
+            </dl>
+
+</div>
+
+
+
+
+
+
+<div class="text-section">
+    
+
+
+        <p><strong>Configure Partner Connection for 2-Way Messaging</strong></p>
+
+<p>Switch to following menu point in your NEXUSe2e Admin GUI:</p>
+
+</div>
+
+    <blockquote>
+        <p><em>NEXUSe2e &gt; Collaboration Partners &gt; YourPartner &gt; Connections</em></p>
+
+    </blockquote>
+
+
+
+
+
+
+<div class="text-section">
+    
+
+
+        <p>If you want to send and receive messages with NEXUSe2e via HTTP Plain do as followed:</p>
+
+<ol>
+	<li>Add a distinct connection name and a valid connection URL.</li>
+	<li>Choose the TRP you are planning to use.</li>
+	<li>Disable Reliable, which will not work correctly with HTTP Plain messaging.</li>
+	<li>Save your connection</li>
+</ol>
+
+<p>&nbsp;</p>
+
+</div>
+
+
+
+
+
+
+<div class="text-section">
+    
+
+
+            <dl class="media photo">
+                <dt><img src="../../../dam/NEXUSe2e/Documentation/Messaging/HTTP-Plain/06_ConfigurePartnerConnection.2014-09-19-17-31-36.jpg" alt="" /></dt>
+                <dd class="zoom"><a href="../../../dam/NEXUSe2e/Documentation/Messaging/HTTP-Plain/06_ConfigurePartnerConnection.2014-09-19-17-31-36.jpg" title="Zoom on this image" rel="showbox">Zoom</a></dd>
+                <dd class="caption"></dd>
+                <dd class="copyright"></dd>
+                <dd class="longdesc"></dd>
+            </dl>
+
+</div>
+
+
+
+
+
+
+<div class="text-section">
+    
+
+
+        <p><strong>Configure Choreography without Acknowledgement</strong></p>
+
+<p>This choreography is used for sending and receiving messages without follow up actions, like ackknowledgements.</p>
+
+<p>You can use the default choreography &quot;Generic File&quot; which is predefined in every NEXUSe2e installation. Only add your partner to the choreography participants.</p>
+
+<p>Switch to following menu point in your NEXUSe2e Admin GUI:</p>
+
+</div>
+
+    <blockquote>
+        <p><em>NEXUSe2e &gt; Choreographies &gt; httpPlain &gt; Participants &gt; Add Participant</em></p>
+
+    </blockquote>
+
+
+
+
+
+
+<div class="text-section">
+    
+
+
+        <p>And do as instructed:</p>
+
+<ol>
+	<li>Choose your desired Partner ID.</li>
+	<li>Choose the connection you configured.</li>
+	<li>Click on &quot;Create&quot;</li>
+</ol>
+
+</div>
+
+
+
+
+
+
+<div class="text-section">
+    
+
+
+            <dl class="media photo">
+                <dt><img src="../../../dam/NEXUSe2e/Documentation/Messaging/HTTP-Plain/07_ConfigureChoreo_1way.2014-09-19-17-31-35.jpg" alt="" /></dt>
+                <dd class="zoom"><a href="../../../dam/NEXUSe2e/Documentation/Messaging/HTTP-Plain/07_ConfigureChoreo_1way.2014-09-19-17-31-35.jpg" title="Zoom on this image" rel="showbox">Zoom</a></dd>
+                <dd class="caption"></dd>
+                <dd class="copyright"></dd>
+                <dd class="longdesc"></dd>
+            </dl>
+
+</div>
+    </div><!-- end text -->
+</div><!-- end main -->
+
+<div id="extras" role="complementary">
+    
+
+</div>
+
+            </div><!-- end wrapper-3 -->
+
+
+<div id="promos">
+    </div><!-- end promos -->
+
+
+        </div><!-- end wrapper-2 -->
+
+
+
+<div id="site-info">
+    <div id="site-info-box">
+        
+<div>
+    
+<ul>
+    
+    <li >
+            <a href="../../Services/Contact.html">Contact</a>
+    </li>
+
+    <li >
+            <a href="../../Services/Legal-Notices-Impressum.html">Legal Notices / Impressum</a>
+    </li>
+</ul>
+</div>
+
+            <p id="copyright"> </p>
+
+        <!-- <p id="copyright-magnolia"><span>Powered by</span> <a href="http://www.magnolia-cms.com"><strong>Magnolia</strong> - Intuitive Opensource CMS</a></p> -->
+    </div><!-- end site-info-box -->
+</div><!-- end site-info -->
+
+    </div><!-- end wrapper -->
+
+</body>
+</html>

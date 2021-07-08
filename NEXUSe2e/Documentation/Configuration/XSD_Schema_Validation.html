@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+
+<html xml:lang="en" lang="en" class="no-js">
+
+<head>
+   <!--[if IE]>
+   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=IE7" />
+   <![endif]-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<meta name="keywords" content="XSD - Schema Validation" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<meta name="robots" content="all" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+<meta name="generator" content="Powered by Magnolia - Intuitive Opensource CMS" />
+
+<title>Home - XSD - Schema Validation</title>
+
+
+    <link rel="stylesheet" type="text/css" href="../../../resources/templating-kit/themes/NEXUSe2e-website/css/nexuse2e.css" media="" />
+
+<!--[if ! lte IE 6]><!-->
+        <script>
+            //global information for the javascripts
+            window.magnoliaFrontendData = {
+                themePath: "/resources/templating-kit/",
+                contextPath: "",
+                isEdit: false,
+                texts: {
+                    lightbox: {
+                        close: "close lightbox",
+                        next: "next picture"
+                    },
+                    close: "close"
+                },
+                cfg: {
+
+                }
+            };
+        </script>
+    <script src="../../../resources/templating-kit/themes/NEXUSe2e-website/js/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script src="../../../resources/templating-kit/themes/NEXUSe2e-website/js/nexuse2e.js" type="text/javascript"></script>
+
+
+<!--<![endif]-->
+</head>
+
+
+
+<body id="article" >
+
+    <div id="wrapper">
+
+
+<div id="branding" role="banner">
+    <div id="branding-box">
+        <p class="skip">
+           <a href="XSD_Schema_Validation.html#main">Main Content</a>
+        </p>
+
+<div id="logo">
+    <a href="../../../NEXUSe2e.html" title="Homepage">
+        
+        <strong>Home</strong>
+        
+        <span></span>
+    </a>
+</div><!-- end logo -->
+
+<div id="search-box">
+    <h6>Search</h6>
+    <form action="../../Services/SearchResults.html" >
+    <div>
+        <label for="searchbar">Search For</label>
+        <input required="required" id="searchbar" name="queryStr" type="text" value="" />
+        <input class="button" type="submit" value="Search" />
+    </div>
+    </form>
+</div><!-- end search-box -->
+
+<div id="nav-meta">
+    <ul>
+            </ul>
+</div><!-- end nav-meta -->
+    </div><!-- end branding-box -->
+</div><!-- end branding -->
+
+
+    <div id="nav-global"  role="navigation">
+        <div id="nav-global-box">
+            <h6>Navigation</h6>
+      <ul>
+
+
+
+              <li id="nav-sec-news">
+                      <a href="../../News.html"><span>News</span></a>
+
+              </li>
+
+
+
+              <li id="nav-sec-product">
+                      <a href="../../Product.html"><span>Product</span></a>
+
+              </li>
+
+
+
+              <li id="nav-sec-service">
+                      <a href="../../Service.html"><span>Service</span></a>
+
+              </li>
+
+
+
+              <li id="nav-sec-documentation" class="on">
+                          <a href="../../Documentation.html">                         <span><em>You are here: </em>Documentation</span>
+</a>
+
+              </li>
+
+
+
+              <li id="nav-sec-downloads">
+                      <a href="../../Downloads.html"><span>Downloads</span></a>
+
+              </li>
+      </ul>
+        </div><!-- end nav-global-box -->
+    </div><!-- end nav-global -->
+
+
+
+
+        <div id="wrapper-2">
+
+
+    <div id="nav">
+        <div id="nav-box" role="navigation">
+            <h6>Sub-navigation</h6>
+        <ul>
+
+            <li>
+                    <a href="../Installation.html">Installation</a>
+            </li>
+
+            <li>
+                    <a href="../Upgrade.html">Upgrade</a>
+            </li>
+
+            <li class="open">
+                    <a href="../Configuration.html">Configuration</a>
+        <ul>
+
+            <li>
+                    <a href="How-to-Alter-the-NEXUSe2e-URL.html">How to Alter the NEXUSe2e URL</a>
+            </li>
+
+            <li>
+                    <a href="Integrated-Authentication-with-MSSQL.html">Integrated Authentication with MSSQL</a>
+            </li>
+
+            <li>
+                    <a href="Windows-Service.html">Windows Service</a>
+            </li>
+
+            <li>
+                    <a href="NEXUSe2e-Backend-Integration.html">NEXUSe2e Backend Integration</a>
+            </li>
+
+            <li class="on">
+                        <strong>                        <span><em>You are here:</em>XSD - Schema Validation</span>
+</strong>
+            </li>
+        </ul>
+            </li>
+
+            <li>
+                    <a href="../Security.html">Security</a>
+            </li>
+
+            <li>
+                    <a href="../Messaging.html">Messaging</a>
+            </li>
+        </ul>
+        </div><!-- end nav-box -->
+    </div><!-- end nav -->
+
+
+            <div id="wrapper-3">
+
+
+<div id="main" role="main">
+
+    
+<div id="breadcrumb">
+    <h5>You are here:</h5>
+    <ol>
+              <li><a href="../../../NEXUSe2e.html">Home</a></li>
+              <li><a href="../../Documentation.html">Documentation</a></li>
+              <li><a href="../Configuration.html">Configuration</a></li>
+              <li><strong>XSD - Schema Validation</strong></li>
+    </ol>
+</div><!-- end breadcrumb -->
+    <div class="text" role="article">
+
+    <h1>
+        
+        XSD - Schema Validation
+    </h1>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="text-section">
+    
+
+
+        <p>XSD validation is possible with NEXUSe2e for outbound and inbound messages. However the components are not enabled by default, you have to create a new pipelet depending on what end you want to validate XML files. For incoming messages it would be suitable to use the frontend pipelet, the backend pipelet for outgoing, thus failed conversation/messages due to invalid XML validations will not occur in your database. If this is an intentional behavior, you need to add the pipelet in the frontend pipeline for outgoing messages vice versa in the backend pipeline for incoming messages. Create the component as descripted and add the pipelet into your pipeline and, also add the relevant XSD file, that is all.</p>
+
+<p>Please make also sure, that the account you are using for the Tomcat Service is allowed to access the folder of your XSD file.</p>
+
+</div>
+
+
+
+
+
+
+<div class="text-section">
+    <h2 >Backend Validation</h2>
+
+
+        <p><strong>Create Component</strong></p>
+
+<p>Open your NEXUSe2e Admin-GUI and switch to <em>Components.</em></p>
+
+<ol>
+	<li>Add a new component.</li>
+	<li>Pick a name that exposes the function of this component.</li>
+	<li>Add following class name: <em>org.nexuse2e.backend.pipelets.XmlSchemaValidationPipelet</em></li>
+	<li>Click on Save.</li>
+	<li>Apply the changes to your Database.</li>
+</ol>
+
+</div>
+
+
+
+
+
+
+<div class="text-section">
+    
+
+
+            <dl class="media photo">
+                <dt><img src="../../../dam/NEXUSe2e/Documentation/Configuration/XSD_Validation/01_AddPipeletBackend.2015-08-18-14-48-39.png" alt="" /></dt>
+                <dd class="zoom"><a href="../../../dam/NEXUSe2e/Documentation/Configuration/XSD_Validation/01_AddPipeletBackend.2015-08-18-14-48-39.png" title="Zoom on this image" rel="showbox">Zoom</a></dd>
+                <dd class="caption"></dd>
+                <dd class="copyright"></dd>
+                <dd class="longdesc"></dd>
+            </dl>
+
+</div>
+
+
+
+
+
+
+<div class="text-section">
+    
+
+
+        <p><strong>Edit your Backend Pipeline</strong></p>
+
+<p>To integrate this pipelet into your workflow, you need to add it to a backend pipeline.</p>
+
+<p>Switch to <em>Backend Pipelines</em> in your Admin-GUI.</p>
+
+<p>Open the pipeline that you want to validate outgoing XML files.</p>
+
+<ol>
+	<li>Pick the backend pipelet you created from the dropdown menu.</li>
+	<li>Click on the plus icon.</li>
+	<li>Set the path to the XSD file and save.</li>
+	<li>Click on Save.</li>
+	<li>Apply the changes to your Database.</li>
+</ol>
+
+</div>
+
+
+
+
+
+
+<div class="text-section">
+    
+
+
+            <dl class="media photo">
+                <dt><img src="../../../dam/NEXUSe2e/Documentation/Configuration/XSD_Validation/03_AddPipeletOutgoing.2015-08-18-14-48-38.png" alt="" /></dt>
+                <dd class="zoom"><a href="../../../dam/NEXUSe2e/Documentation/Configuration/XSD_Validation/03_AddPipeletOutgoing.2015-08-18-14-48-38.png" title="Zoom on this image" rel="showbox">Zoom</a></dd>
+                <dd class="caption"></dd>
+                <dd class="copyright"></dd>
+                <dd class="longdesc"></dd>
+            </dl>
+
+</div>
+
+
+
+
+
+
+<div class="text-section">
+    
+
+
+        <p>This is all that needs to be done, your outgoing XML files will now be validated against your XSD file.</p>
+
+</div>
+
+
+
+
+
+
+<div class="text-section">
+    <h2 >Frontend Validation</h2>
+
+
+        <p><strong>Create Component</strong></p>
+
+<p>Open your NEXUSe2e Admin-GUI and switch to <em>Components.</em></p>
+
+<ol>
+	<li>Add a new component.</li>
+	<li>Pick a name that exposes the function of this component.</li>
+	<li>Add following class name: <em>org.nexuse2e.backend.pipelets.FrontendXmlSchemaValidationPipelet</em></li>
+	<li>Click on Save.</li>
+	<li>Apply the changes to your Database.</li>
+</ol>
+
+</div>
+
+
+
+
+
+
+<div class="text-section">
+    
+
+
+            <dl class="media photo">
+                <dt><img src="../../../dam/NEXUSe2e/Documentation/Configuration/XSD_Validation/02_AddPipeletFrontend.2015-08-18-14-48-38.png" alt="" /></dt>
+                <dd class="zoom"><a href="../../../dam/NEXUSe2e/Documentation/Configuration/XSD_Validation/02_AddPipeletFrontend.2015-08-18-14-48-38.png" title="Zoom on this image" rel="showbox">Zoom</a></dd>
+                <dd class="caption"></dd>
+                <dd class="copyright"></dd>
+                <dd class="longdesc"></dd>
+            </dl>
+
+</div>
+
+
+
+
+
+
+<div class="text-section">
+    
+
+
+        <p><strong>Edit your Frontend Pipeline</strong></p>
+
+<p>To integrate this pipelet into your workflow, you need to add it to a frontend pipeline.</p>
+
+<p>Switch to <em>Frontend Pipelines</em> in your Admin-GUI.</p>
+
+<p>Open the pipeline that you want to validate outgoing XML files.</p>
+
+<ol>
+	<li>Pick the frontend pipelet you created from the dropdown menu. *</li>
+	<li>Click on the plus icon.</li>
+	<li>Set the path to the XSD file and save.</li>
+	<li>Click on Save.</li>
+	<li>Apply the changes to your Database.</li>
+</ol>
+
+</div>
+
+    <blockquote>
+        <p><em>* It should be on the lowest position, the message should be unpackend and deserialized first.</em></p>
+
+    </blockquote>
+
+
+
+
+
+
+<div class="text-section">
+    
+
+
+            <dl class="media photo">
+                <dt><img src="../../../dam/NEXUSe2e/Documentation/Configuration/XSD_Validation/04_AddPipeletIncoming.2015-08-18-14-48-38.png" alt="" /></dt>
+                <dd class="zoom"><a href="../../../dam/NEXUSe2e/Documentation/Configuration/XSD_Validation/04_AddPipeletIncoming.2015-08-18-14-48-38.png" title="Zoom on this image" rel="showbox">Zoom</a></dd>
+                <dd class="caption"></dd>
+                <dd class="copyright"></dd>
+                <dd class="longdesc"></dd>
+            </dl>
+
+</div>
+
+
+
+
+
+
+<div class="text-section">
+    
+
+
+        <p>This is all that needs to be done, your incoming XML files will now be validated against your XSD file.</p>
+
+</div>
+
+
+
+
+
+
+<div class="text-section">
+    <h2 >Log Messages</h2>
+
+
+        <p>Messages that do not surpass the validation process will not occur in your NEXUSe2e Transaction Reporting as conversation but will generate a log entry which will look like this:</p>
+
+</div>
+
+    <blockquote>
+        <p><em>[ERROR] 2015-08-14 17:23:26,487 org.nexuse2e.service.http.HttpReceiverService.handleRequest(HttpReceiverService.java:150) - unknown/unknown (unknown-&gt;unknown): processing failed (error-ref:9e077aac-a45a-4abd-8079-2d5b5d90a45e)</em></p>
+
+<p>The stacktrace, in this case it is shortened, you will find which part is not valid:</p>
+
+<p><em>&nbsp;&nbsp;&nbsp; at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)<br />
+&nbsp;&nbsp; &nbsp;at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)<br />
+&nbsp;&nbsp; &nbsp;at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)<br />
+&nbsp;&nbsp; &nbsp;at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)<br />
+&nbsp;&nbsp; &nbsp;at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)<br />
+&nbsp;&nbsp; &nbsp;at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)<br />
+&nbsp;&nbsp; &nbsp;at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)<br />
+&nbsp;&nbsp; &nbsp;at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:505)<br />
+&nbsp;&nbsp; &nbsp;at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)<br />
+&nbsp;&nbsp; &nbsp;at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)<br />
+&nbsp;&nbsp; &nbsp;at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:957)<br />
+&nbsp;&nbsp; &nbsp;at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)<br />
+&nbsp;&nbsp; &nbsp;at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:423)<br />
+&nbsp;&nbsp; &nbsp;at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1079)<br />
+&nbsp;&nbsp; &nbsp;at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:620)<br />
+&nbsp;&nbsp; &nbsp;at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.doRun(AprEndpoint.java:2516)<br />
+&nbsp;&nbsp; &nbsp;at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:2505)<br />
+&nbsp;&nbsp; &nbsp;at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)<br />
+&nbsp;&nbsp; &nbsp;at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)<br />
+&nbsp;&nbsp; &nbsp;at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)<br />
+&nbsp;&nbsp; &nbsp;at java.lang.Thread.run(Thread.java:745)<br />
+Caused by: org.xml.sax.SAXParseException; cvc-elt.1: Cannot find the declaration of element &#39;Document&#39;.<br />
+&nbsp;&nbsp; &nbsp;at org.apache.xerces.util.ErrorHandlerWrapper.createSAXParseException(Unknown Source)<br />
+&nbsp;&nbsp; &nbsp;at org.apache.xerces.util.ErrorHandlerWrapper.error(Unknown Source)<br />
+&nbsp;&nbsp; &nbsp;at org.apache.xerces.impl.XMLErrorReporter.reportError(Unknown Source)<br />
+&nbsp;&nbsp; &nbsp;at org.apache.xerces.impl.XMLErrorReporter.reportError(Unknown Source)<br />
+&nbsp;&nbsp; &nbsp;at org.apache.xerces.impl.xs.XMLSchemaValidator.handleStartElement(Unknown Source)<br />
+&nbsp;&nbsp; &nbsp;at org.apache.xerces.impl.xs.XMLSchemaValidator.startElement(Unknown Source)<br />
+&nbsp;&nbsp; &nbsp;at org.apache.xerces.jaxp.validation.DOMValidatorHelper.beginNode(Unknown Source)<br />
+&nbsp;&nbsp; &nbsp;at org.apache.xerces.jaxp.validation.DOMValidatorHelper.validate(Unknown Source)<br />
+&nbsp;&nbsp; &nbsp;at org.apache.xerces.jaxp.validation.DOMValidatorHelper.validate(Unknown Source)<br />
+&nbsp;&nbsp; &nbsp;at org.apache.xerces.jaxp.validation.ValidatorImpl.validate(Unknown Source)<br />
+&nbsp;&nbsp; &nbsp;at javax.xml.validation.Validator.validate(Validator.java:124)<br />
+&nbsp;&nbsp; &nbsp;at org.nexuse2e.backend.pipelets.XmlSchemaValidationPipelet.processMessage(XmlSchemaValidationPipelet.java:143)<br />
+&nbsp;&nbsp; &nbsp;... 33 more</em></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+    </blockquote>
+
+
+
+
+
+
+<div class="text-section">
+    
+
+
+        <p>Lookout for the part:</p>
+
+<p><em>Caused by: org.xml.sax.SAXParseException; cvc-elt.1: Cannot find the declaration of element &#39;Document&#39;.</em></p>
+
+<p>It says that the element &quot;Document&quot; is not valid according to the XSD.</p>
+
+</div>
+    </div><!-- end text -->
+</div><!-- end main -->
+
+<div id="extras" role="complementary">
+    
+
+</div>
+
+            </div><!-- end wrapper-3 -->
+
+
+<div id="promos">
+    </div><!-- end promos -->
+
+
+        </div><!-- end wrapper-2 -->
+
+
+
+<div id="site-info">
+    <div id="site-info-box">
+        
+<div>
+    
+<ul>
+    
+    <li >
+            <a href="../../Services/Contact.html">Contact</a>
+    </li>
+
+    <li >
+            <a href="../../Services/Legal-Notices-Impressum.html">Legal Notices / Impressum</a>
+    </li>
+</ul>
+</div>
+
+            <p id="copyright"> </p>
+
+        <!-- <p id="copyright-magnolia"><span>Powered by</span> <a href="http://www.magnolia-cms.com"><strong>Magnolia</strong> - Intuitive CMS System</a></p> -->
+    </div><!-- end site-info-box -->
+</div><!-- end site-info -->
+
+    </div><!-- end wrapper -->
+
+</body>
+</html>
