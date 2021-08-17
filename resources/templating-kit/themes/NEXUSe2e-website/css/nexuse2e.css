@@ -456,3 +456,12 @@ dl {
 	display: inline-block;
 	width: 100%;
 }
+
+ul.release-details {
+	border: none;
+	list-style: disc;
+}
+
+ul.release-details > p {
+	margin-left: -15px;
+}

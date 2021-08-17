@@ -120,53 +120,48 @@
                     <div class="links">
                         <h2>NEXUSe2e current version</h2>
                         <ul>
-                            <li class="download">
-                                <a href="../dam/NEXUSe2e/Download/patches/patches_551/patches_5.5.1.jar">Patches_5.5.1 <em>(JAR, 23 KB)</em></a>
-                            </li>
-
-                            <blockquote><p><br/></p></blockquote>
-
                             <li class="external">
                                 <a href="https://github.com/solutionsdirekt/NEXUSe2e/releases/download/v5.9.10/nexuse2e-webapp-5.9.10.war" target="_blank">NEXUSe2e 5.9.10</a>
                             </li>
 
-                            <blockquote>
-                                <p>Fixed a bug with unwanted requeueing acks which occured in 5.9.9.</p>
+                            <ul class="release-details">
+                                <li><p>Fixed a bug with unwanted requeueing acks which occured in 5.9.9.</p></li>
 
-                                <p>Because of the bug version 5.9.9 waqs revoked. Changes included in that version are included in this version:</p>
+                                <li><p>Because of the bug version 5.9.9 waqs revoked. Changes included in that version are included in this version:</p></li>
 
-                                <p>Add TEXT to the service parameter view</p>
+                                <ul class="release-details" style="padding:0;">
+                                    <li><p>Add TEXT to the service parameter view</p></li>
 
-                                <p>Enable StaticRoutingPiplet to also overwrite participant</p>
+                                    <li><p>Enable StaticRoutingPiplet to also overwrite participant</p></li>
 
-                                <p>Missleading log entry for sending message is now removed</p>
+                                    <li><p>Missleading log entry for sending message is now removed</p></li>
 
-                                <p>0 retries are now running into errors if no ack follows</p>
+                                    <li><p>0 retries are now running into errors if no ack follows</p></li>
 
-                                <p>Updated copyright headers</p>
+                                    <li><p>Updated copyright headers</p></li>
 
-                                <p>Fix ClassCastException on Reporting page for oracle db</p>
+                                    <li><p>Fix ClassCastException on Reporting page for oracle db</p></li>
+                                </ul>
 
                                 <p><strong>MD5:&nbsp;</strong>19d37077cc7c6837668e38e2acdc6f40</p>
 
                                 <p><strong>SHA256:&nbsp;</strong>aae36c856375f68483eeba0c984dc0bef3d66c9f3939c995175e75a2cd7f3e14</p>
 
                                 <p>&nbsp;</p>
-
-                            </blockquote>
+                            </ul>
 
                             <li class="external">
                                 <a href="https://github.com/solutionsdirekt/NEXUSe2e/releases/download/v.5.9.8/nexuse2e-webapp-5.9.8.war" target="_blank">NEXUSe2e 5.9.8</a>
                             </li>
 
-                            <blockquote>
-                                <p>The HTTPIntegrationPipelet now allows the setting of custom headers.</p>
+                            <ul class="release-details">
+                                <li><p>The HTTPIntegrationPipelet now allows the setting of custom headers.</p></li>
 
-                                <p>CA certificate views were extended (fingerprints, duplicates, single cert export option).</p>
+                                <li><p>CA certificate views were extended (fingerprints, duplicates, single cert export option).</p></li>
 
-                                <p>Partner Connection based tls protocol and cipher suite configuration (added in version 5.9.4) was improved.</p>
+                                <li><p>Partner Connection based tls protocol and cipher suite configuration (added in version 5.9.4) was improved.</p></li>
 
-                                <p>A new dashboard was added to provide an overview of recent messages and configured certificates.</p>
+                                <li><p>A new dashboard was added to provide an overview of recent messages and configured certificates.</p></li>
 
                                 <p><strong>Known issues: </strong>Version breaks using Oracle db: ClassCastException on Reporting page - fixed in version 5.9.10</p>
 
@@ -175,36 +170,35 @@
                                 <p><strong>SHA256</strong>: 8AC88C18A5AFD95E5347C0B58BDB2234B6B25628F852EDAFA73B8F26AF6340D1</p>
 
                                 <p>&nbsp;</p>
-
-                            </blockquote>
+                            </ul>
 
                             <li class="external">
                                 <a href="https://github.com/solutionsdirekt/NEXUSe2e/releases/download/v5.9.5/nexuse2e-webapp-5.9.5.war" target="_blank">NEXUSe2e 5.9.5</a>
                             </li>
 
-                            <blockquote>
-                                <p>Hotfix release to fix known issue:</p>
+                            <ul class="release-details">
+                                <li><p>Hotfix release to fix known issue:</p></li>
 
-                                <p>Old Email Loggers cause issues on first start.</p>
+                                <li><p>Old Email Loggers cause issues on first start.</p></li>
 
                                 <p><strong>MD5</strong>: 74ECA7433EE2520B6F4A0FE2817B1CC9</p>
 
                                 <p><strong>SHA256: </strong>0B825F8A887DC860F84D1A3C9C0CA5A40705F06E3954429D098CE4449D932E0D<br/></p>
 
-                            </blockquote>
+                            </ul>
 
                             <li class="external">
                                 <a href="https://github.com/solutionsdirekt/NEXUSe2e/releases/download/v5.9.4/nexuse2e-webapp-5.9.4.war" target="_blank">NEXUSe2e 5.9.4</a>
                             </li>
 
-                            <blockquote>
-                                <p>The ssl configuration for sending messages is now configurable on a per partner
+                            <ul class="release-details">
+                                <li><p>The ssl configuration for sending messages is now configurable on a per partner
                                     bases. For incomming messages, this was always possible by adding multiple
                                     connectors to the tomcat configuration. Now the same options are available for
-                                    sending message.</p>
+                                    sending message.</p></li>
 
-                                <p>The Email Notifier now provides options for filtering mails send out. This way its
-                                    possible to limit email notifications to exaclty the information you require. &nbsp;<strong> </strong> </p>
+                                <li><p>The Email Notifier now provides options for filtering mails send out. This way its
+                                    possible to limit email notifications to exaclty the information you require. &nbsp;<strong> </strong> </p></li>
 
                                 <p><strong>Known Issues: </strong>the reporting graphs are broken since a couple version
                                     of NEXUSe2e and got removed in this version. This is related to some library
@@ -215,15 +209,15 @@
 
                                 <p><strong>SHA256:</strong> 8f0fa2900239d37fff764041a53f3c9f8a35a8ddcef9ea757ca1056b695894a4</p>
 
-                            </blockquote>
+                            </ul>
 
                             <li class="external">
                                 <a href="https://github.com/solutionsdirekt/NEXUSe2e/releases/download/v5.9.3/nexuse2e-webapp-5.9.3.war" target="_blank">NEXUSe2e 5.9.3</a>
                             </li>
 
-                            <blockquote>
-                                <p>We did a rewrite on the statements for the message and conversations&nbsp;database
-                                    purge. This was required for supporting derby databases in test environments.</p>
+                            <ul class="release-details">
+                                <li><p>We did a rewrite on the statements for the message and conversations&nbsp;database
+                                    purge. This was required for supporting derby databases in test environments.</p></li>
 
                                 <p><strong>MD5: </strong>e71e420c4cf3b6fc57d50a28558edd19</p>
 
@@ -231,30 +225,30 @@
 
                                 <p>&nbsp;</p>
 
-                            </blockquote>
+                            </ul>
 
                             <li class="external">
                                 <a href="https://github.com/solutionsdirekt/NEXUSe2e/releases/download/v5.9.2/nexuse2e-webapp-5.9.2.war" target="_blank">NEXUSe2e 5.9.2</a>
                             </li>
 
-                            <blockquote>
-                                <p>This version fixes the contentId issue related to filesystem uploads and reuse of filenames as contentIds.</p>
+                            <ul class="release-details">
+                                <li><p>This version fixes the contentId issue related to filesystem uploads and reuse of filenames as contentIds.</p></li>
 
                                 <p><strong>MD5:</strong> 0BF1E3845B48755310E7909C21142687</p>
 
                                 <p><strong>SHA256: </strong>F3E89F81ED0728E198242DC764B14E519A7E36C9DF5E00FDD40419C81480D547</p>
 
-                            </blockquote>
+                            </ul>
 
                             <li class="external">
                                 <a href="https://github.com/solutionsdirekt/NEXUSe2e/releases/download/v5.9.1/nexuse2e-webapp-5.9.1.war" target="_blank">NEXUSe2e 5.9.1</a>
                             </li>
 
-                            <blockquote>
-                                <p>This is the first version of NEXUSe2e provided via Github. We wil gradually move all downloads and activities over to Github.</p>
+                            <ul class="release-details">
+                                <li><p>This is the first version of NEXUSe2e provided via Github. We wil gradually move all downloads and activities over to Github.</p></li>
 
-                                <p>Begining with 5.9 gradual java 11 support is provided. In this version the Postgres
-                                    version was bumped and a role permissions issue for requeuing messages was fixed.</p>
+                                <li><p>Begining with 5.9 gradual java 11 support is provided. In this version the Postgres
+                                    version was bumped and a role permissions issue for requeuing messages was fixed.</p></li>
 
                                 <p><strong>MD5: </strong>33CF987BE3AAB4CB3AB257F53DD6E645</p>
 
@@ -262,12 +256,9 @@
 
                                 <p>&nbsp;</p>
 
-                            </blockquote>
-
+                            </ul>
                         </ul>
                     </div><!-- end links -->
-
-
                 </div><!-- end text -->
             </div><!-- end main -->
 
