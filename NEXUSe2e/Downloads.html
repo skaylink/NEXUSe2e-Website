@@ -125,6 +125,8 @@
                             </li>
 
                             <ul class="release-details">
+                                <p><strong>Changes: </strong>
+
                                 <li><p>Fixed a bug with unwanted requeueing acks which occured in 5.9.9.</p></li>
 
                                 <li><p>Because of the bug version 5.9.9 waqs revoked. Changes included in that version are included in this version:</p></li>
@@ -155,6 +157,8 @@
                             </li>
 
                             <ul class="release-details">
+                                <p><strong>Changes: </strong>
+
                                 <li><p>The HTTPIntegrationPipelet now allows the setting of custom headers.</p></li>
 
                                 <li><p>CA certificate views were extended (fingerprints, duplicates, single cert export option).</p></li>
@@ -163,7 +167,9 @@
 
                                 <li><p>A new dashboard was added to provide an overview of recent messages and configured certificates.</p></li>
 
-                                <p><strong>Known issues: </strong>Version breaks using Oracle db: ClassCastException on Reporting page - fixed in version 5.9.10</p>
+                                <p><strong>Known issues: </strong>
+
+                                <li><p>Version breaks using Oracle db: ClassCastException on Reporting page - fixed in version 5.9.10</p></li>
 
                                 <p><strong>MD5</strong>: 7330795BE9D7C97415CBB53C7F989466</p>
 
@@ -177,6 +183,8 @@
                             </li>
 
                             <ul class="release-details">
+                                <p><strong>Changes: </strong>
+
                                 <li><p>Hotfix release to fix known issue:</p></li>
 
                                 <li><p>Old Email Loggers cause issues on first start.</p></li>
@@ -185,6 +193,7 @@
 
                                 <p><strong>SHA256: </strong>0B825F8A887DC860F84D1A3C9C0CA5A40705F06E3954429D098CE4449D932E0D<br/></p>
 
+                                <p>&nbsp;</p>
                             </ul>
 
                             <li class="external">
@@ -192,23 +201,28 @@
                             </li>
 
                             <ul class="release-details">
+                                <p><strong>Changes: </strong>
+
                                 <li><p>The ssl configuration for sending messages is now configurable on a per partner
                                     bases. For incomming messages, this was always possible by adding multiple
                                     connectors to the tomcat configuration. Now the same options are available for
                                     sending message.</p></li>
 
                                 <li><p>The Email Notifier now provides options for filtering mails send out. This way its
-                                    possible to limit email notifications to exaclty the information you require. &nbsp;<strong> </strong> </p></li>
+                                    possible to limit email notifications to exaclty the information you require.</p></li>
 
-                                <p><strong>Known Issues: </strong>the reporting graphs are broken since a couple version
+                                <p><strong>Known issues: </strong>
+
+                                    <li><p>The reporting graphs are broken since a couple version
                                     of NEXUSe2e and got removed in this version. This is related to some library
                                     updates. A new overview will be available in the next version. By removing the
-                                    graphs plugin the war file got significantly smaller.&nbsp;</p>
+                                    graphs plugin the war file got significantly smaller.&nbsp;</p></li>
 
                                 <p><strong>MD5: </strong>6e0f76a05c7642fc148b092a2d354e9a</p>
 
                                 <p><strong>SHA256:</strong> 8f0fa2900239d37fff764041a53f3c9f8a35a8ddcef9ea757ca1056b695894a4</p>
 
+                                <p>&nbsp;</p>
                             </ul>
 
                             <li class="external">
@@ -216,6 +230,8 @@
                             </li>
 
                             <ul class="release-details">
+                                <p><strong>Changes: </strong>
+
                                 <li><p>We did a rewrite on the statements for the message and conversations&nbsp;database
                                     purge. This was required for supporting derby databases in test environments.</p></li>
 
@@ -224,7 +240,6 @@
                                 <p><strong>SHA256: </strong>8c594fc25c759edaaf99aa220ce761b00f5adfef92033665ab42833213f91bc3</p>
 
                                 <p>&nbsp;</p>
-
                             </ul>
 
                             <li class="external">
@@ -232,12 +247,15 @@
                             </li>
 
                             <ul class="release-details">
+                                <p><strong>Changes: </strong>
+
                                 <li><p>This version fixes the contentId issue related to filesystem uploads and reuse of filenames as contentIds.</p></li>
 
                                 <p><strong>MD5:</strong> 0BF1E3845B48755310E7909C21142687</p>
 
                                 <p><strong>SHA256: </strong>F3E89F81ED0728E198242DC764B14E519A7E36C9DF5E00FDD40419C81480D547</p>
 
+                                <p>&nbsp;</p>
                             </ul>
 
                             <li class="external">
@@ -245,6 +263,8 @@
                             </li>
 
                             <ul class="release-details">
+                                <p><strong>Changes: </strong>
+
                                 <li><p>This is the first version of NEXUSe2e provided via Github. We wil gradually move all downloads and activities over to Github.</p></li>
 
                                 <li><p>Begining with 5.9 gradual java 11 support is provided. In this version the Postgres
@@ -255,7 +275,6 @@
                                 <p><strong>SHA256: </strong>9280F033772613935596C5D88B84E313B1DCFE8693AEC6E4A0CC5C9094FCE9D2</p>
 
                                 <p>&nbsp;</p>
-
                             </ul>
                         </ul>
                     </div><!-- end links -->
