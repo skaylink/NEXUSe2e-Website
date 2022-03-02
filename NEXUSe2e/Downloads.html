@@ -121,6 +121,88 @@
                         <h2>NEXUSe2e current version</h2>
                         <ul>
                             <li class="external">
+                                <a href="https://github.com/solutionsdirekt/NEXUSe2e/releases/download/v5.11.1/nexuse2e-webapp-5.11.1.war" target="_blank">NEXUSe2e 5.11.1</a>
+                            </li>
+
+                            <ul class="release-details">
+                                <p><strong>Changes: </strong></p>
+
+                                <li>
+                                    <p>Upgraded Log4j 1 to Log4j 2 (version 2.17.1)</p>
+                                    <p>
+                                        Important: The log4j.properties from previous NEXUSe2e releases cannot be used anymore.
+                                        The file needs to converted to the Log4j 2 xml format for this and upcoming NEXUSe2e releases.
+                                        A log4j2.xml is included with custom NEXUSe2e database logging and a RollingFileAppender enabled by default.
+                                        For more information see <a href="Documentation/Configuration/log4j2.html"
+                                                                    style="text-decoration: none;">Log4j 2 configuration</a> section of this website.
+                                    </p>
+                                </li>
+
+                                <li>
+                                    <p>
+                                        Removed Notifiers section from UI as part of the Log4j 2 upgrade.
+                                        Database and Email logging can be configured through Log4j 2 config file now.
+                                    </p>
+                                </li>
+
+                                <li><p>Bumped Postgres version to version 42.2.25</p></li>
+
+                                <li>
+                                    <p>
+                                        Added new responsive ui (additive as an alternative to the existing ui).
+                                        The new ui can be opended in the browser by adding /ui/ to the NEXUSe2e root url (e.g. https://localhost:8080/NEXUSe2e/ui/).
+                                        Only the "new" dashboard (introduced in version 5.9.8), Transaction Reporting and the  Engine Log are included in the ui at this point.
+                                    </p>
+                                </li>
+
+                                <p><strong>MD5:&nbsp;</strong>5366B9E97F13A489B0540DC7299698CD</p>
+
+                                <p><strong>SHA256:&nbsp;</strong>2FD7F162692C3A27D6815F931AEF962AC6A87B42349F661337B93589C1A3BFB9</p>
+
+                                <p>&nbsp;</p>
+                            </ul>
+
+                            <li class="external">
+                                <a href="https://github.com/solutionsdirekt/NEXUSe2e/releases/download/v5.9.15/nexuse2e-webapp-5.9.15.war" target="_blank">NEXUSe2e 5.9.15</a>
+                            </li>
+
+                            <ul class="release-details">
+                                <p><strong>Changes: </strong></p>
+
+                                <li><p>Added http header folding option to prevent content type from being folded into a new line.</p></li>
+
+                                <p><strong>MD5:&nbsp;</strong>2D3869567E10047C90CD7729A4B48864</p>
+
+                                <p><strong>SHA256:&nbsp;</strong>C199A51FEA4FC662B682751D2ACA2990DF1E65413BBE24FD85A8AEC208CE6F39</p>
+
+                                <p>&nbsp;</p>
+                            </ul>
+
+                            <li class="external">
+                                <a href="https://github.com/solutionsdirekt/NEXUSe2e/releases/download/v5.9.11/nexuse2e-webapp-5.9.11.war" target="_blank">NEXUSe2e 5.9.11</a>
+                            </li>
+
+                            <ul class="release-details">
+                                <p><strong>Changes: </strong></p>
+
+                                <li><p>Implemented HttpResponses for synchronous messaging</p></li>
+
+                                <li><p>Fixed deadlock when synchronously receiving messages</p></li>
+
+                                <li><p>Fixed backend status</p></li>
+
+                                <p><strong>Known issues: </strong></p>
+
+                                <li><p>"Synchronous" for incoming messages still does not work properly in combination with "Reliable"</p></li>
+
+                                <p><strong>MD5:&nbsp;</strong>8E547BF1B85D871A283C73FCEB67BC86</p>
+
+                                <p><strong>SHA256:&nbsp;</strong>EAB34A337ECD3E300AA2EBDC3657674D5CF2E9E4ED176C4D2340DFAE56FB2C0B</p>
+
+                                <p>&nbsp;</p>
+                            </ul>
+
+                            <li class="external">
                                 <a href="https://github.com/solutionsdirekt/NEXUSe2e/releases/download/v5.9.10/nexuse2e-webapp-5.9.10.war" target="_blank">NEXUSe2e 5.9.10</a>
                             </li>
 
@@ -129,7 +211,7 @@
 
                                 <li><p>Fixed a bug with unwanted requeueing acks which occured in 5.9.9.</p></li>
 
-                                <li><p>Because of the bug version 5.9.9 waqs revoked. Changes included in that version are included in this version:</p></li>
+                                <li><p>Because of the bug version 5.9.9 was revoked. Changes included in that version are included in this version:</p></li>
 
                                 <ul class="release-details" style="padding:0;">
                                     <li><p>Add TEXT to the service parameter view</p></li>

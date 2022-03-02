@@ -9,18 +9,19 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link rel="shortcut icon" type="image/x-icon" href="../../../resources/templating-kit/themes/NEXUSe2e-website/img/logo.png">
 
-    <meta name="keywords" content="How to Alter the NEXUSe2e URL"/>
+    <meta name="keywords" content="log4j2"/>
     <meta name="description" content=""/>
     <meta name="author" content=""/>
     <meta name="robots" content="all"/>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    <meta name="generator" content="Powered by Magnolia - Intuitive Website Content Management System"/>
+    <meta name="generator" content="Powered by Magnolia - Intuitive Opensource CMS"/>
 
-    <title>Home - How to Alter the NEXUSe2e URL</title>
+    <title>Home - Logging with Log4j 2</title>
 
-    <link rel="stylesheet" type="text/css" href="../../../resources/templating-kit/themes/NEXUSe2e-website/css/nexuse2e.css" media=""/>
+    <link rel="stylesheet" type="text/css"
+          href="../../../resources/templating-kit/themes/NEXUSe2e-website/css/nexuse2e.css" media=""/>
 
     <!--[if ! lte IE 6]><!-->
     <script>
@@ -39,8 +40,10 @@
             cfg: {}
         };
     </script>
-    <script src="../../../resources/templating-kit/themes/NEXUSe2e-website/js/jquery-1.10.2.min.js" type="text/javascript"></script>
-    <script src="../../../resources/templating-kit/themes/NEXUSe2e-website/js/nexuse2e.js" type="text/javascript"></script>
+    <script src="../../../resources/templating-kit/themes/NEXUSe2e-website/js/jquery-1.10.2.min.js"
+            type="text/javascript"></script>
+    <script src="../../../resources/templating-kit/themes/NEXUSe2e-website/js/nexuse2e.js"
+            type="text/javascript"></script>
     <!--<![endif]-->
 </head>
 
@@ -50,7 +53,7 @@
     <div id="branding" role="banner">
         <div id="branding-box">
             <p class="skip">
-                <a href="How-to-Alter-the-NEXUSe2e-URL.html#main">Main Content</a>
+                <a href="log4j2.html#main">Main Content</a>
             </p>
 
             <div id="logo">
@@ -85,7 +88,7 @@
                 </li>
 
                 <li id="nav-sec-documentation" class="on">
-                    <a href="../../Documentation.html"> <span><em>You are here: </em>Documentation</span></a>
+                    <a href="../../Documentation.html"> <span><em>You are here: </em>Documentation</span> </a>
                 </li>
 
                 <li id="nav-sec-downloads">
@@ -103,7 +106,6 @@
                     <li>
                         <a href="../Installation.html">Installation</a>
                     </li>
-
                     <li>
                         <a href="../Upgrade.html">Upgrade</a>
                     </li>
@@ -111,8 +113,8 @@
                     <li class="open">
                         <a href="../Configuration.html">Configuration</a>
                         <ul>
-                            <li class="on">
-                                <strong> <span><em>You are here:</em>How to Alter the NEXUSe2e URL</span> </strong>
+                            <li>
+                                <a href="How-to-Alter-the-NEXUSe2e-URL.html">How to Alter the NEXUSe2e URL</a>
                             </li>
 
                             <li>
@@ -131,8 +133,8 @@
                                 <a href="XSD_Schema_Validation.html">XSD - Schema Validation</a>
                             </li>
 
-                            <li>
-                                <a href="log4j2.html">Logging with Log4j 2</a>
+                            <li class="on">
+                                <strong> <span><em>You are here:</em>Logging with Log4j 2</span> </strong>
                             </li>
                         </ul>
                     </li>
@@ -153,79 +155,48 @@
                 <div id="breadcrumb">
                     <h5>You are here:</h5>
                     <ol>
-                        <li><a href="../../../Home.html">Home</a></li>
+                        <li><a href="../../Home.html">Home</a></li>
                         <li><a href="../../Documentation.html">Documentation</a></li>
                         <li><a href="../Configuration.html">Configuration</a></li>
-                        <li><strong>How to Alter the NEXUSe2e URL</strong></li>
+                        <li><strong>Logging with Log4j 2</strong></li>
                     </ol>
                 </div><!-- end breadcrumb -->
                 <div class="text" role="article">
                     <h1>
-                        How to Alter the NEXUSe2e URL
+                        Logging with Log4j 2
                     </h1>
 
                     <div class="text-section">
-                        <h2>Change Application Name</h2>
+                        <p>Logging in NEXUSe2e is implemented using Log4j 2 (starting with NEXUSe2e version 5.11.1).</p>
 
-                        <p>The application name in the URL (&quot;/NEXUSe2e) is determined by the directory name of your NEXUSe2e instance inside your Tomcat&#39;s webapp folder.</p>
+                        <p>
+                            All logging is configured via the log4j2.xml file located in the \WEB-INF\classes\ folder,
+                            including database and email logging that was configured through the Notifiers section in the ui of previous NEXUSe2e verions.
+                        </p>
 
-                        <p>To change this part of the URL please follow these steps:</p>
+                        <p>
+                            A custom database logging appender is responsible for logging information to the the NEXUSe2e database for the <strong>Transaction Reporting and Engine Log</strong> sections of the ui.
+                            Locate the &lt;DatabaseLogger name="DatabaseLogger_default"> section in log4j2.xml to set the log level (Default: 'info').
+                            Standard Log4j 2 log levels can be applied.
+                            With log4j 2 the log level ids were changed from log4j 1.
+                            Therefore log levels from logging entries from previous NEXUSe2e version (5.9.x and earlier)
+                        </p>
 
-                        <ul>
-                            <li>Stop your NEXUSe2e Service. *</li>
-                            <li>Rename your application folder and the war-file accordingly.</li>
-                            <li>Start your NEXUSe2e Service. **</li>
-                        </ul>
+                        <p>
+                            All other logging uses out-of-the-box log4j2 appenders and any Log4j 2 appender can be added.
+                        </p>
 
-                        <p><em>* Else Tomcat&#39;s autoDeplay feature will delete every folder without a fitting *.war file and will also deploy *.war-files without the corresponding application directory.</em></p>
+                        <p>
+                            By default the RollingFileAppender is configured and enabled to create <strong>log files</strong> with mostly info level log information.
+                            A maximum of 10 log files are kept for up to 30 days.
+                        </p>
 
-                        <p><em>** Make sure these match, else this could lead to a configuration loss.</em></p>
-                    </div>
+                        <p>
+                            To receive <strong>E-Mail Notifications</strong> complete SMTP appender configuration and enable it by commenting in the
+                            &lt;AppenderRef ref="Mail"/> line in the Root logger section.
+                        </p>
 
-                    <div class="text-section">
-                        <dl class="media photo">
-                            <dt><img src="../../../dam/NEXUSe2e/Documentation/Configuration/09-04-_2015_14-19-17.2015-04-27-11-02-48.jpg" alt=""/></dt>
-                            <dd class="zoom"><a href="../../../dam/NEXUSe2e/Documentation/Configuration/09-04-_2015_14-19-17.2015-04-27-11-02-48.jpg" title="Zoom on this image" rel="showbox">Zoom</a></dd>
-                            <dd class="caption"></dd>
-                            <dd class="copyright"></dd>
-                            <dd class="longdesc"></dd>
-                        </dl>
-                    </div>
-
-                    <div class="text-section">
-                        <p>As displayed in the example, your URL would now be something like <em>HTTP://192.168.2.1/NEXUSe2e_FAQ/</em>.
-                            Remember to share it with your partners, administrators and change it in the monitoring, as well.</p>
-
-                        <p>When later updating NEXUSe2e, you also have to mind that the new war-file must match the name of the changed file.</p>
-                    </div>
-
-                    <div class="text-section">
-                        <h2>Change Service Name</h2>
-
-                        <p>The next option is to change the service name, go to your NEXUSe2e Admin-GUI and switch to:</p>
-                    </div>
-
-                    <blockquote>
-                        <p><em>Server Configuration &gt; Services &gt; HttpReceiverService</em></p>
-                    </blockquote>
-
-                    <div class="text-section">
-                        <p>Edit the Logical Name to your needs, save and apply the changes.</p>
-                    </div>
-
-                    <div class="text-section">
-                        <dl class="media photo">
-                            <dt><img src="../../../dam/NEXUSe2e/Documentation/Configuration/hander_09-04-_2015_15-25-16.2015-04-27-11-02-48.jpg" alt=""/></dt>
-                            <dd class="zoom"><a href="../../../dam/NEXUSe2e/Documentation/Configuration/hander_09-04-_2015_15-25-16.2015-04-27-11-02-48.jpg" title="Zoom on this image" rel="showbox">Zoom</a></dd>
-                            <dd class="caption"></dd>
-                            <dd class="copyright"></dd>
-                            <dd class="longdesc"></dd>
-                        </dl>
-                    </div>
-
-                    <div class="text-section">
-                        <p>After the changes are applied, the URL for ebxml20 connections is /NEXUSe2e/handler/&lt;newlogicalname&gt;.
-                            This time, the change is stored in the database, and will be consistent for future upgrades.</p>
+                        <p>For more configuration options visit the <a href="https://logging.apache.org/log4j/2.x/manual/configuration.html#Appenders">Apache Log4j 2 website</a>.</p>
                     </div>
                 </div><!-- end text -->
             </div><!-- end main -->
@@ -254,7 +225,7 @@
 
             <p id="copyright"></p>
 
-            <!-- <p id="copyright-magnolia"><span>Powered by</span> <a href="http://www.magnolia-cms.com"><strong>Magnolia</strong> - Simple Open-Source CMS</a></p> -->
+            <!-- <p id="copyright-magnolia"><span>Powered by</span> <a href="http://www.magnolia-cms.com"><strong>Magnolia</strong> - Intuitive CMS System</a></p> -->
         </div><!-- end site-info-box -->
     </div><!-- end site-info -->
 </div><!-- end wrapper -->
