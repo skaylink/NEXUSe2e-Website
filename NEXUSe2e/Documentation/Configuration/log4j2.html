@@ -175,28 +175,44 @@
                         </p>
 
                         <p>
+                            Other than the database logging appender, all logging uses out-of-the-box log4j2 appenders and any Log4j 2 appender can be added.
+                            For more configuration options visit the <a href="https://logging.apache.org/log4j/2.x/manual/configuration.html#Appenders">Apache Log4j 2 website</a>.
+                        </p>
+                    </div>
+
+                    <div class="text-section">
+                        <p><strong>Transaction Reporting and Engine Log</strong></p>
+                        <p>
                             A custom database logging appender is responsible for logging information to the the NEXUSe2e database for the <strong>Transaction Reporting and Engine Log</strong> sections of the ui.
                             Locate the &lt;DatabaseLogger name="DatabaseLogger_default"> section in log4j2.xml to set the log level (Default: 'info').
                             Standard Log4j 2 log levels can be applied.
                             With log4j 2 the log level ids were changed from log4j 1.
-                            Therefore log levels from logging entries from previous NEXUSe2e version (5.9.x and earlier)
+                            Therefore log levels from logging entries from previous NEXUSe2e version (5.9.x and earlier) cannot be properly identified for display or filtering.
+                            To fix older log entries, the following sql commands can be executed against the NEXUSe2e database:
+                            </br>
+                            </br>UPDATE [nx_log] SET [severity] = 100 WHERE [severity] = 50000
+                            </br>UPDATE [nx_log] SET [severity] = 200 WHERE [severity] = 40000
+                            </br>UPDATE [nx_log] SET [severity] = 300 WHERE [severity] = 30000
+                            </br>UPDATE [nx_log] SET [severity] = 400 WHERE [severity] = 20000
+                            </br>UPDATE [nx_log] SET [severity] = 500 WHERE [severity] = 10000
+                            </br>UPDATE [nx_log] SET [severity] = 600 WHERE [severity] = 5000
                         </p>
+                    </div>
 
-                        <p>
-                            All other logging uses out-of-the-box log4j2 appenders and any Log4j 2 appender can be added.
-                        </p>
-
+                    <div class="text-section">
+                        <p><strong>File Logging</strong></p>
                         <p>
                             By default the RollingFileAppender is configured and enabled to create <strong>log files</strong> with mostly info level log information.
                             A maximum of 10 log files are kept for up to 30 days.
                         </p>
+                    </div>
 
+                    <div class="text-section">
+                        <p><strong>E-Mail Notifications</strong></p>
                         <p>
                             To receive <strong>E-Mail Notifications</strong> complete SMTP appender configuration and enable it by commenting in the
                             &lt;AppenderRef ref="Mail"/> line in the Root logger section.
                         </p>
-
-                        <p>For more configuration options visit the <a href="https://logging.apache.org/log4j/2.x/manual/configuration.html#Appenders">Apache Log4j 2 website</a>.</p>
                     </div>
                 </div><!-- end text -->
             </div><!-- end main -->
